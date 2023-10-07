@@ -1,26 +1,80 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+  <NavigationBar />
+  <router-link to="/text" style="text-decoration: none; color: #000; ">{{ email }}</router-link>
+  <router-view />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavigationBar from './components/NavigationBar.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    NavigationBar,
+  },
+  data () {
+    return {
+  
+    }
+  },
+  mounted() {
+    
+  }, 
+  methods: {
+
+    }
+
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
 }
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#app {
+  width: 1200px;
+  height: 1400px;
+}
+
+@media screen and (max-width: 1230px) {
+  #app {
+    width: 800px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  #app {
+    width: 730px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #app {
+    width: 570px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #app {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #app {
+    width: 350px;
+  }
+}
+
 </style>
